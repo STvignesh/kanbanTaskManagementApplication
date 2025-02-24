@@ -1,0 +1,37 @@
+.sideBarContainer {
+  width: 17rem;
+  height: 100%;
+  /* padding: 0 1rem; */
+}
+.allboard {
+  text-transform: uppercase;
+  color: #828fa3;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+.board-icon {
+  fill: #635fc7;
+}
+.createBoardContainer span {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.createBoardContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: #635fc7;
+  padding-left: 2rem;
+}
+.createBoardContainer:hover {
+  cursor: pointer;
+}
+.boardsContainer {
+  max-height: 60%;
+  overflow-y: scroll;
+}

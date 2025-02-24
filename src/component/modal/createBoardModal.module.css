@@ -1,0 +1,105 @@
+.boardModalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem;
+  z-index: 1000;
+  width: 30rem;
+  min-height: 20rem;
+  max-height: 60rem;
+  border-radius: 9px;
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.boardNameInput {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  outline: none;
+  position: relative;
+}
+.boardNameInput::placeholder {
+  color: rgba(130, 143, 163, 0.598);
+}
+.boardNameInput:not(.inputError):focus {
+  border: 1px solid rgb(33, 33, 182);
+}
+.boardLabel {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  color: #828fa3;
+}
+
+.boardColumns {
+  display: flex;
+  width: 100%;
+  /* min-height: 10rem; */
+  max-height: 20rem;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  overflow-y: scroll;
+}
+.boarNameContainer {
+  margin-bottom: 1.5rem;
+}
+.inputWidth {
+  width: 95%;
+}
+.boardColumn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.boardColumn div {
+  width: 100%;
+}
+.crossIcon {
+  width: 4%;
+  fill: #828fa3;
+}
+.crossIcon:hover {
+  cursor: pointer;
+}
+.boardModalheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: rgb(226, 17, 17);
+  position: absolute;
+  right: 5%;
+  bottom: 30%;
+}
+.inputError {
+  border: 1px solid rgb(226, 17, 17);
+}
+/* .inputError:focus {
+  border: 1px solid rgba(130, 143, 163, 0.25);
+} */
+.inputContainer {
+  width: 100%;
+  position: relative;
+}
+.errorPlace {
+  right: 15%;
+}

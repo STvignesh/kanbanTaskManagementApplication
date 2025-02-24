@@ -1,0 +1,7 @@
+.boardContainer {
+  background-color: #f4f7fd;
+  width: 87rem;
+  height: 91.1vh;
+  padding: 1rem 0 0 1rem;
+  overflow: scroll;
+}

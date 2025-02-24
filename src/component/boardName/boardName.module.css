@@ -1,0 +1,22 @@
+.boardNameContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.boardNameContainer span {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #828fa3;
+  word-break: break-word;
+}
+.boardIcon {
+  fill: #828fa3;
+  min-width: 10%;
+}
+.boardNameContainer:hover {
+  cursor: pointer;
+}

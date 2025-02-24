@@ -1,0 +1,26 @@
+/* way that best balances the number of characters on each line, enhancing layout quality and legibility.  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", serif;
+}
