@@ -1,8 +1,15 @@
+import { useSelector } from "react-redux";
 import styles from "../boardName/boardName.module.css";
 function BoardName({ board, handleSelectBoard }) {
+  // console.log(board);
+  const selected = useSelector((state) => state.board.selectedBoard[0]);
+  const selectedBoard = useSelector((state) => state.board?.selectedBoard);
+  console.log("selectedBoard", selectedBoard);
   return (
     <div
-      className={styles.boardNameContainer}
+      className={`${styles.boardNameContainer} ${
+        selected && selected.id === board.id ? `${styles.selected}` : ""
+      }`}
       onClick={() => handleSelectBoard(board.id)}
     >
       <svg

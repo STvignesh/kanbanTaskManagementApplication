@@ -32,6 +32,12 @@
   cursor: pointer;
 }
 .boardsContainer {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
   max-height: 60%;
   overflow-y: scroll;
+  width: 100%;
+  /* padding: 1rem; */
+  /* padding-left: 2rem; */
 }

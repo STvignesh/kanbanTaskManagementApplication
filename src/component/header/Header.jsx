@@ -3,12 +3,12 @@ import styles from "../header/header.module.css";
 import addTaskIcon from "../../Assets/icon-add-task-mobile.svg";
 import verticalEllipseIcon from "../../Assets/icon-vertical-ellipsis.svg";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import TaskModal from "../modal/TaskModal";
 function Header() {
   const selectedBoard = useSelector((state) => state.board.selectedBoard);
   console.log(selectedBoard);
-  function handleCreateTask() {
-    console.log("clicked");
-  }
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className={`${styles.headerContainer}`}>
       <div className={`${styles.logoContainer}`}>
@@ -25,7 +25,10 @@ function Header() {
           <button
             className={styles.addTaskBtn}
             disabled={selectedBoard.length === 0}
-            onClick={handleCreateTask}
+            onClick={() => {
+              console.log("clicked!");
+              setIsOpen(!isOpen);
+            }}
           >
             <img src={addTaskIcon} alt="+ symbol icon" />
             <span>Add New Task</span>
@@ -37,6 +40,7 @@ function Header() {
           />
         </div>
       </div>
+      {isOpen && <TaskModal setIsOpen={setIsOpen} isOpen={isOpen} />}
     </header>
   );
 }

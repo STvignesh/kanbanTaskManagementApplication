@@ -27,8 +27,19 @@ const boardSlice = createSlice({
         if (state.selectedBoard[0].id !== board.id) board.isActive = false;
       });
     },
+    createTask(state, action) {
+      state.selectedBoard[0].columns.forEach((column) => {
+        if (column.name === action.payload.status)
+          column.tasks.push({
+            title: action.payload.title,
+            description: action.payload.description,
+            status: action.payload.status,
+            subtasks: action.payload.subtasks,
+          });
+      });
+    },
   },
 });
 
-export const { createBoard, selectBoard } = boardSlice.actions;
+export const { createBoard, selectBoard, createTask } = boardSlice.actions;
 export default boardSlice.reducer;

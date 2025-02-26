@@ -1,25 +1,25 @@
 import { useState } from "react";
-import styles from "../modal/createBoardModal.module.css";
+import styles from "../modal/taskModal.module.css";
 
-function BoardColumn({ column, handleRemove, errors }) {
-  const [boardValue, setBoardValue] = useState(column.name);
-  column.name = boardValue;
-  //   console.log(boardValue);
+function SubTasks({ task, handleRemove, errors }) {
+  const [taskName, setTaskName] = useState(task.title);
+  task.title = taskName;
+
   return (
-    <div key={column.id} className={styles.boardColumn}>
+    <div key={task.id} className={styles.boardColumn}>
       <div>
         <input
           type="text"
           name="Task Type"
           className={`${styles.boardNameInput} ${styles.inputWidth} ${
-            !boardValue && errors ? styles.inputError : ""
+            !taskName && errors ? `${styles.inputError}` : ""
           }`}
-          value={boardValue}
+          value={taskName}
           onChange={(e) => {
-            setBoardValue(e.target.value);
+            setTaskName(e.target.value);
           }}
         />
-        {!boardValue && errors && (
+        {!taskName && errors && (
           <span className={`${styles.error} ${styles.errorPlace}`}>
             {errors}
           </span>
@@ -29,7 +29,7 @@ function BoardColumn({ column, handleRemove, errors }) {
         xmlns="http://www.w3.org/2000/svg"
         className={styles.crossIcon}
         viewBox="0 0 16 16"
-        onClick={() => handleRemove(column.id)}
+        onClick={() => handleRemove(task.id)}
       >
         <g fillRule="evenodd">
           <path d="m12.728 0 2.122 2.122L2.122 14.85 0 12.728z" />
@@ -40,4 +40,4 @@ function BoardColumn({ column, handleRemove, errors }) {
   );
 }
 
-export default BoardColumn;
+export default SubTasks;

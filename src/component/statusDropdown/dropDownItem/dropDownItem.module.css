@@ -1,0 +1,10 @@
+.dropDownItem {
+  padding: 0.5rem;
+  margin: 0.1rem;
+  width: 100%;
+  /* border-radius: 0.5rem; */
+  cursor: pointer;
+}
+.dropDownItem:hover {
+  background-color: rgba(130, 143, 163, 0.25);
+}

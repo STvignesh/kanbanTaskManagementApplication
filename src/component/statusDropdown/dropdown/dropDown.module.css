@@ -1,0 +1,11 @@
+.dropDown {
+  position: relative;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #606a78;
+  font-size: 0.9rem;
+}
+.error {
+  border: 1px solid rgb(226, 17, 17);
+  border-radius: 4px;
+}

@@ -9,7 +9,7 @@ function SideBar() {
   const [openModal, setOpenModal] = useState(false);
   const dispatch = useDispatch();
   const boards = useSelector((state) => state.board.boards);
-  console.log(boards);
+  console.log("boards", boards);
   // console.log(boards);
   function handleSelectBoard(id) {
     dispatch(selectBoard({ id }));

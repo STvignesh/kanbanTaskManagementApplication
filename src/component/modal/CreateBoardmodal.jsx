@@ -103,7 +103,7 @@ function CreateBoardmodal({ setOpenModal }) {
                 name="board name"
                 id="boardName"
                 value={boardName}
-                onChange={(e) => setBoardName(inputRef.current.value)}
+                onChange={() => setBoardName(inputRef.current.value)}
                 className={`${styles.boardNameInput} ${
                   errors && !boardName ? `${styles.inputError}` : ""
                 }`}

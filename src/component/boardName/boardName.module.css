@@ -1,16 +1,35 @@
 .boardNameContainer {
   display: flex;
-  width: 100%;
+  width: 90%;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  padding: 1rem;
+  /*  */
+  padding-left: 2rem;
+  color: #828fa3;
+  transition: all 0.2s;
 }
-
+.boardNameContainer:hover {
+  background-color: rgba(98, 95, 199, 0.155);
+  /* padding: 1rem; */
+  border-radius: 0 50px 50px 0;
+  padding-left: 2rem;
+  color: rgb(99, 95, 199);
+}
+.boardNameContainer.selected {
+  background-color: rgb(99, 95, 199);
+  padding: 1rem;
+  border-radius: 0 50px 50px 0;
+  padding-left: 2rem;
+  transition: all 0.3s;
+  color: #fff;
+}
 .boardNameContainer span {
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
-  color: #828fa3;
+  color: inherit;
   word-break: break-word;
 }
 .boardIcon {
